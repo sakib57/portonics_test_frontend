@@ -5,6 +5,8 @@ import DefaultLayout from "./pages/layouts/default";
 import GuestLayout from "./pages/layouts/guest";
 import Orders from "./pages/orders/orders";
 import OrderForm from "./pages/forms/orderForm";
+import OrderInvoice from "./pages/orders/invoice";
+import OrderSuccess from "./pages/orders/success";
 
 const router = createBrowserRouter([
     {
@@ -17,11 +19,19 @@ const router = createBrowserRouter([
             },
             {
                 path: "/orders/create",
-                element: <OrderForm key="OrderCreate" />,
+                element: <OrderForm />,
+            },
+            {
+                path: "/orders/success",
+                element: <OrderSuccess />,
+            },
+            {
+                path: "/orders/invoice/:id",
+                element: <OrderInvoice />,
             },
             {
                 path: "/orders/:id",
-                element: <OrderForm key="OrderUpdate"/>,
+                element: <OrderForm />,
             },
         ],
     },

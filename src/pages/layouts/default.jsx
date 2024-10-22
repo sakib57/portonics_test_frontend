@@ -51,7 +51,7 @@ const DefaultLayout = () => {
               </Link>
             </div>
           </div>
-          <Outlet />
+            <Outlet/>
         </div>
       </main>
     </div>
